@@ -1,0 +1,21 @@
+
+<ng-container>
+    <div class="test">
+        <div class="head">
+            <h2>{{genre.name}}</h2>
+        </div>
+        <div class="movie">
+        <ng-container *ngFor="let movie of movies">
+            <div [routerLink]="['/movies', movie.id]">
+            <div class="data">
+                <h3> {{movie.title}} </h3>
+                <img class="img" [src]="movie.poster">
+            </div>
+        </div>
+
+        </ng-container>
+        </div>
+    </div>
+
+
+</ng-container>
